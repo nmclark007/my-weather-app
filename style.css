@@ -1,0 +1,178 @@
+body {
+  background-image: url("images/cork2.jpg");
+  font-family: "Abril Fatface", cursive;
+  margin: auto;
+  background-color: #fcf4d9;
+}
+
+h1 {
+  padding: 10px;
+  text-align: left;
+  color: #5e87b8;
+  font-size: 60px;
+  border: 6px solid pink;
+  width: fit-content;
+  background-color: pink;
+  margin: 1%;
+}
+
+.card-intro,
+.card-main {
+  background-color: #97cba9;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ny a,
+.lon a,
+.hk a,
+.ca a {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.ny a:hover,
+.lon a:hover,
+.hk a:hover,
+.ca a:hover {
+  color: #7dace4;
+}
+
+.search-style {
+  border: none;
+  background-color: #7dace4;
+  padding: 1%;
+}
+
+.submit-style {
+  position: relative;
+  border: none;
+  color: whitesmoke;
+  background-color: #7dace4;
+  padding: 1%;
+}
+
+.carzzzd-body {
+  padding: 3%;
+}
+
+h2 {
+  text-align: left;
+  color: whitesmoke;
+  font-size: 65px;
+  padding-left: 1%;
+}
+
+.details {
+  text-align: right;
+  padding-right: 10%;
+  padding-bottom: 10%;
+  color: #dde0ab;
+}
+
+.fahrenheit,
+.celsius {
+  border-radius: 50%;
+  color: #005689;
+  border-color: #7dace4;
+  background-color: #7dace4;
+  box-shadow: #fcf4d9;
+  border-width: 1px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.fahrenheit:hover,
+.celsius:hover {
+  background-color: #fcf4d9;
+}
+
+.high {
+  text-align: center;
+  color: whitesmoke;
+  padding-bottom: 5%;
+  font-size: 50px;
+}
+
+.low {
+  text-align: center;
+  color: whitesmoke;
+  padding-bottom: 5%;
+  font-size: 30px;
+}
+
+.current-weather {
+  text-align: center;
+  color: whitesmoke;
+  padding-bottom: 1%;
+  padding-top: 0;
+  font-size: 98px;
+}
+
+.sunny {
+  color: #f8b595;
+  font-size: 45px;
+  padding-bottom: 5%;
+}
+
+.cloudy-sun {
+  color: #f67280;
+  padding-bottom: 5%;
+  font-size: 45px;
+}
+
+.cloudy-sun-main {
+  color: #f67280;
+  padding-bottom: 5%;
+  font-size: 98px;
+}
+
+.cloud {
+  color: #c06c84;
+  padding-bottom: 5%;
+  font-size: 45px;
+}
+
+.thunder {
+  color: #6c5b7c;
+  padding-bottom: 5%;
+  font-size: 45px;
+}
+
+.relax {
+  background-color: rgb(255, 192, 203, 0.6);
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  border: 6px solid pink;
+  margin: 0 auto;
+  padding: 10%;
+  color: #005689;
+  font-size: 30px;
+}
+
+audio {
+  padding: 3%;
+  margin-top: 2%;
+}
+img {
+  border-radius: 5%;
+  border: 8px solid pink;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  color: #ffff;
+  size: 20px;
+  padding-top: 5%;
+}
+.music {
+  padding-bottom: 3%;
+  padding-top: 5%;
+}
