@@ -67,12 +67,21 @@ function showPosition(position) {
 }
 
 function showWeather(response) {
-  let temp = Math.round(response.data.main.temp);
+  let tempMax = Math.round(response.data.main.temp_max);
+  let tempMin = Math.round(response.data.main.temp_min);
   let city = response.data.name;
+  let humidity = response.data.main.humidity;
+  let wind = response.data.wind.speed;
+  let humidityElement = document.querySelector("#humidity");
   let h2 = document.querySelector("#main-city");
   let h1 = document.querySelector("#current-high");
+  let h3 = document.querySelector("#current-low");
+  let windSpeed = document.querySelector("#wind");
   h2.innerHTML = `${city}`;
-  h1.innerHTML = `${temp}`;
+  h1.innerHTML = `${tempMax}°`;
+  h3.innerHTML = `${tempMin}°`;
+  humidityElement.innerHTLM = `${humidity}%`;
+  windSpeed.innerHTML = `${wind}`;
 }
 
 function getLocation(event) {
