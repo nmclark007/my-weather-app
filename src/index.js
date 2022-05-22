@@ -52,7 +52,7 @@ function getWeatherApi(city) {
     .get(
       `${apiUrl}${city}&appid=0c9ee1c46913511e8bf8aca53ad61bfd&units=imperial`
     )
-    .then(displayWeather);
+    .then(showWeather);
 }
 
 //Bonus Week 5
