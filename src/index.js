@@ -100,3 +100,5 @@ function getLocation(event) {
 }
 let showLocation = document.querySelector("#current-location");
 showLocation.addEventListener("click", getLocation);
+
+getWeatherApi("New York");
