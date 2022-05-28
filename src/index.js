@@ -73,10 +73,12 @@ function showWeather(response) {
   let city = response.data.name;
   let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed);
+  let weatherDescription = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
   let h2 = document.querySelector("#main-city");
   let h1 = document.querySelector("#current-high");
   let h3 = document.querySelector("#current-low");
+  let description = document.querySelector("#description");
   let windSpeed = document.querySelector("#wind");
   let mainIcon = document.querySelector("#mainicon");
   h2.innerHTML = `${city}`;
@@ -84,6 +86,7 @@ function showWeather(response) {
   h3.innerHTML = `${tempMin}°`;
   humidityElement.innerHTML = `${humidity}%`;
   windSpeed.innerHTML = `${wind}mph`;
+  description.innerHTML = `${weatherDescription}`;
   mainIcon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
