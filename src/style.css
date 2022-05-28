@@ -119,7 +119,6 @@ h2 {
 
 .cloudy-sun {
   color: #f67280;
-  padding-bottom: 5%;
   font-size: 45px;
 }
 
@@ -159,7 +158,7 @@ audio {
   padding: 3%;
   margin-top: 2%;
 }
-img {
+.imgFun {
   border-radius: 5%;
   border: 8px solid pink;
   display: block;

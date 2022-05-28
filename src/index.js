@@ -40,11 +40,11 @@ function updateSearch(event) {
 let searchCity = document.querySelector("#find-weather");
 searchCity.addEventListener("submit", updateSearch);
 
-function displayWeather(response) {
-  let temp = Math.round(response.data.main.temp);
-  let h1 = document.querySelector("#current-high");
-  h1.innerHTML = `${temp}°`;
-}
+//function displayWeather(response) {
+//let temp = Math.round(response.data.main.temp);
+//let h1 = document.querySelector("#current-high");
+//h1.innerHTML = `${temp}°`;
+//}
 
 function getWeatherApi(city) {
   let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -67,6 +67,7 @@ function showPosition(position) {
 }
 
 function showWeather(response) {
+  console.log(response.data);
   let tempMax = Math.round(response.data.main.temp_max);
   let tempMin = Math.round(response.data.main.temp_min);
   let city = response.data.name;
@@ -77,11 +78,16 @@ function showWeather(response) {
   let h1 = document.querySelector("#current-high");
   let h3 = document.querySelector("#current-low");
   let windSpeed = document.querySelector("#wind");
+  let mainIcon = document.querySelector("#mainicon");
   h2.innerHTML = `${city}`;
   h1.innerHTML = `${tempMax}°`;
   h3.innerHTML = `${tempMin}°`;
   humidityElement.innerHTML = `${humidity}%`;
   windSpeed.innerHTML = `${wind}mph`;
+  mainIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function getLocation(event) {
