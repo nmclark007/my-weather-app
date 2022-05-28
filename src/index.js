@@ -71,7 +71,7 @@ function showWeather(response) {
   let tempMin = Math.round(response.data.main.temp_min);
   let city = response.data.name;
   let humidity = response.data.main.humidity;
-  let wind = response.data.wind.speed;
+  let wind = Math.round(response.data.wind.speed);
   let humidityElement = document.querySelector("#humidity");
   let h2 = document.querySelector("#main-city");
   let h1 = document.querySelector("#current-high");
@@ -80,8 +80,8 @@ function showWeather(response) {
   h2.innerHTML = `${city}`;
   h1.innerHTML = `${tempMax}°`;
   h3.innerHTML = `${tempMin}°`;
-  humidityElement.innerHTLM = `${humidity}%`;
-  windSpeed.innerHTML = `${wind}`;
+  humidityElement.innerHTML = `${humidity}%`;
+  windSpeed.innerHTML = `${wind}mph`;
 }
 
 function getLocation(event) {
