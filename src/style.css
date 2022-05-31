@@ -86,21 +86,16 @@ li:first-line {
   text-transform: capitalize;
 }
 
-.fahrenheit,
-.celsius {
-  border-radius: 50%;
-  color: #005689;
-  border-color: #7dace4;
-  background-color: #7dace4;
-  box-shadow: #fcf4d9;
-  border-width: 1px;
-  display: inline-block;
-  margin-left: 10px;
+.weather-temperature .active {
+  background-color: #97cba9;
+  cursor: default;
+  text-decoration: none;
+  font-size: 50px;
+  color: whitesmoke;
 }
 
-.fahrenheit:hover,
-.celsius:hover {
-  background-color: #fcf4d9;
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
 
 .high {

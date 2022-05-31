@@ -81,11 +81,15 @@ function showWeather(response) {
   let description = document.querySelector("#description");
   let windSpeed = document.querySelector("#wind");
   let mainIcon = document.querySelector("#mainicon");
+
+  fahrenheitMax = response.data.main.temp_max;
+  fahrenheitMin = response.data.main.temp_min;
+
   h2.innerHTML = `${city}`;
   h1.innerHTML = `${tempMax}°`;
   h3.innerHTML = `${tempMin}°`;
-  humidityElement.innerHTML = `${humidity}%`;
-  windSpeed.innerHTML = `${wind}mph`;
+  humidityElement.innerHTML = `${humidity} %`;
+  windSpeed.innerHTML = `${wind} mph`;
   description.innerHTML = `${weatherDescription}`;
   mainIcon.setAttribute(
     "src",
@@ -93,12 +97,44 @@ function showWeather(response) {
   );
 }
 
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let celsiusTempMax = Math.round((5 / 9) * (fahrenheitMax - 32));
+  let celsiusTempMin = Math.round((5 / 9) * (fahrenheitMin - 32));
+  let tempMax = document.querySelector("#current-high");
+  let tempMin = document.querySelector("#current-low");
+  celsuisLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  tempMax.innerHTML = tempMax.innerHTML = `${celsiusTempMax}°`;
+  tempMin.innerHTML = tempMin.innerHTML = `${celsiusTempMin}°`;
+}
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempMax = document.querySelector("#current-high");
+  let tempMin = document.querySelector("#current-low");
+  celsuisLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  tempMax.innerHTML = `${Math.round(fahrenheitMax)}°`;
+  tempMin.innerHTML = `${Math.round(fahrenheitMin)}°`;
+}
+
 function getLocation(event) {
   event.preventDefault();
 
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+
 let showLocation = document.querySelector("#current-location");
 showLocation.addEventListener("click", getLocation);
+
+let fahrenheitMax = null;
+let fahrenheitMin = null;
+
+let celsuisLink = document.querySelector("#celsiusJ");
+celsuisLink.addEventListener("click", showCelsiusTemp);
+
+let fahrenheitLink = document.querySelector("#fahrenheitJ");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 getWeatherApi("New York");
