@@ -100,33 +100,10 @@ li:first-line {
   font-size: 98px;
 }
 
-.sunny {
-  color: #f8b595;
-  font-size: 45px;
-  padding-bottom: 5%;
-}
-
-.cloudy-sun {
-  color: #f67280;
-  font-size: 45px;
-}
-
-.cloudy-sun-main {
-  color: #f67280;
-  padding-bottom: 5%;
-  font-size: 98px;
-}
-
-.cloud {
-  color: #c06c84;
-  padding-bottom: 5%;
-  font-size: 45px;
-}
-
-.thunder {
-  color: #6c5b7c;
-  padding-bottom: 5%;
-  font-size: 45px;
+.weekly-forcast {
+  font-size: 20px;
+  padding-bottom: 0%;
+  padding-top: 5%;
 }
 
 .relax {
