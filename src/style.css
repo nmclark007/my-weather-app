@@ -16,28 +16,12 @@ h1 {
   margin: 1%;
 }
 
-.card-intro,
 .card-main {
   background-color: #97cba9;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 75px;
   border-radius: 5px;
   text-align: center;
-}
-
-.ny a,
-.lon a,
-.hk a,
-.ca a {
-  color: whitesmoke;
-  cursor: pointer;
-}
-
-.ny a:hover,
-.lon a:hover,
-.hk a:hover,
-.ca a:hover {
-  color: #7dace4;
+  padding: 5%;
 }
 
 .search-style {
@@ -52,10 +36,6 @@ h1 {
   color: whitesmoke;
   background-color: #7dace4;
   padding: 1%;
-}
-
-.carzzzd-body {
-  padding: 3%;
 }
 
 h2 {

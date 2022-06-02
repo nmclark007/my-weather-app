@@ -28,84 +28,44 @@
   <body>
     <h1 id="time"></h1>
 
-    <div class="container">
-      <div class="card-intro">
-        <div class="card-body">
-          <div class="default-cities">
-            <div class="row">
-              <div class="col ny">
-                <a
-                  href="https://weather.com"
-                  target="_blank"
-                  class="text-decoration-none"
-                >
-                  New York City</a
-                >
-              </div>
-              <div class="col lon">
-                <a
-                  href="https://weather.com"
-                  target="_blank"
-                  class="text-decoration-none"
-                >
-                  London</a
-                >
-              </div>
-              <div class="col hk">
-                <a
-                  href="https://weather.com"
-                  target="_blank"
-                  class="text-decoration-none"
-                >
-                  Hong Kong</a
-                >
-              </div>
-              <div class="col ca">
-                <a
-                  href="https://weather.com"
-                  target="_blank"
-                  class="text-decoration-none"
-                >
-                  California</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-main">
-        <div class="carzzzd-body">
-          <form class="search" id="find-weather">
-            <div>
-                <span>
-            <input type="search" value="" class="search-style" id="city" placeholder="Enter city" />
-                </span>
+    <div class="card-main">
+      <div class="carzzzd-body">
+        <form class="search" id="find-weather">
+          <div>
             <span>
-            <button class="submit-style" type="submit">Search</button>
+              <input
+                type="search"
+                value=""
+                class="search-style"
+                id="city"
+                placeholder="Enter city"
+              />
+            </span>
+            <span>
+              <button class="submit-style" type="submit">Search</button>
             </span>
           </div>
-       </form>
+        </form>
 
-          <h2 id="main-city"></h2>
-          
-          <div class="weather-temperature">
-            <a href="#" id="fahrenheitJ" class="active">°F</a>
-            <a href="#" id="celsiusJ" class="celsius">°C</a>
-          <br>
-            <button id="current-location"> Current Location </button>
+        <h2 id="main-city"></h2>
+
+        <div class="weather-temperature">
+          <a href="#" id="fahrenheitJ" class="active">°F</a>
+          <a href="#" id="celsiusJ" class="celsius">°C</a>
+          <br />
+          <button id="current-location">Current Location</button>
         </div>
 
-          <div class="details">
-            <ul>
+        <div class="details">
+          <ul>
             <li>Humidity: <span id="humidity"></span></li>
             <li>Wind: <span id="wind"></span></li>
             <li>Description: <span id="description"></span></li>
-            </ul>
-          </div>
+          </ul>
+        </div>
 
-          <div class="current-weather">
-            <img class="cloudy-sun-main" id="mainicon" src=""/>
+        <div class="current-weather">
+          <img class="cloudy-sun-main" id="mainicon" src="" />
           <div>
             <span class="current-temp" id="current-high">°</span>
           </div>
@@ -140,27 +100,39 @@
                 <div class="high">75°</div>
                 <div class="low">34°</div>
               </div>
-        
+            </div>
           </div>
         </div>
-      </div>
       </div>
       <div class="row">
         <div class="col">
           <p class="relax">
             Dont forget to stop and reflect on your day! Here is some music to
             help..
-          <br>
-          <audio src="src/music/relax.mp3" controls></audio>
-        </p>
+            <br />
+            <audio src="src/music/relax.mp3" controls></audio>
+          </p>
         </div>
         <div class="col">
-          <img class="imgFun" src="src/images/greatday.jpg" alt="great-day" width="300" />
+          <img
+            class="imgFun"
+            src="src/images/greatday.jpg"
+            alt="great-day"
+            width="300"
+          />
         </div>
       </div>
     </div>
-    <footer><a href="https://github.com/nmclark007/my-weather-app" target="_blank"> Open-source code</a> by Nichole Clark <br><span class="music"> Music by <a href="https://mixkit.co"> mixkit</a></span><br> Corkboard background by <a href="https://www.freepik.com/topntp26">topntp26</a>  </footer>
-<script src="src/index.js"></script>
+    <footer>
+      <a href="https://github.com/nmclark007/my-weather-app" target="_blank">
+        Open-source code</a
+      >
+      by Nichole Clark <br /><span class="music">
+        Music by <a href="https://mixkit.co"> mixkit</a></span
+      ><br />
+      Corkboard background by
+      <a href="https://www.freepik.com/topntp26">topntp26</a>
+    </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
-
