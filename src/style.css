@@ -100,7 +100,8 @@ li:first-line {
   font-size: 98px;
 }
 
-.weekly-forcast {
+.weekly-forecast {
+  color: #005689;
   font-size: 20px;
   padding-bottom: 0%;
   padding-top: 5%;
