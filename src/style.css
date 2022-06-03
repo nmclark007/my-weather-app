@@ -1,19 +1,16 @@
 body {
-  background-image: url("images/cork2.jpg");
+  background: url("../src/images/clouds.jpg");
   font-family: "Abril Fatface", cursive;
   margin: auto;
-  background-color: #fcf4d9;
 }
 
 h1 {
+  text-align: right;
   padding: 10px;
-  text-align: left;
-  color: #5e87b8;
-  font-size: 60px;
-  border: 6px solid pink;
-  width: fit-content;
-  background-color: pink;
-  margin: 1%;
+  color: whitesmoke;
+  font-size: 25px;
+  border: none;
+  border-radius: 5%;
 }
 
 .card-main {
@@ -22,12 +19,15 @@ h1 {
   border-radius: 5px;
   text-align: center;
   padding: 5%;
+  border-radius: 13%;
+  opacity: 0.8;
 }
 
 .search-style {
   border: none;
   background-color: #7dace4;
   padding: 1%;
+  border-radius: 5%;
 }
 
 .submit-style {
@@ -36,6 +36,22 @@ h1 {
   color: whitesmoke;
   background-color: #7dace4;
   padding: 1%;
+  border-radius: 5%;
+}
+
+#current-location {
+  border: none;
+  color: whitesmoke;
+  background-color: #7dace4;
+  padding: 2%;
+  font-size: small;
+  border-radius: 50%;
+}
+
+#current-location:hover,
+.submit-style:hover {
+  background-color: whitesmoke;
+  color: #7dace4;
 }
 
 h2 {
@@ -52,8 +68,8 @@ h2:first-letter {
 ul {
   text-align: right;
   padding-right: 10%;
-  padding-bottom: 10%;
-  color: #dde0ab;
+  padding-bottom: 1%;
+  color: #005689;
 }
 
 li {
@@ -66,16 +82,11 @@ li:first-line {
   text-transform: capitalize;
 }
 
-.weather-temperature .active {
-  background-color: #97cba9;
+.weather-temperature {
   cursor: default;
   text-decoration: none;
   font-size: 50px;
   color: whitesmoke;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
 }
 
 .high {
@@ -103,7 +114,7 @@ li:first-line {
 .weekly-forecast {
   color: #005689;
   font-size: 20px;
-  padding-bottom: 0%;
+  padding-bottom: 5%;
   padding-top: 5%;
 }
 
@@ -119,6 +130,7 @@ li:first-line {
   padding: 10%;
   color: #005689;
   font-size: 30px;
+  border-radius: 5%;
 }
 
 audio {
@@ -134,7 +146,7 @@ audio {
 
 footer {
   text-align: center;
-  color: #ffff;
+  color: #97cba9;
   size: 20px;
   padding-top: 5%;
 }

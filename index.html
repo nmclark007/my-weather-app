@@ -26,11 +26,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1 id="time"></h1>
-
+    
     <div class="card-main">
       <div class="carzzzd-body">
         <form class="search" id="find-weather">
+          <h1 id="time"></h1>
+          
           <div>
             <span>
               <input
@@ -46,12 +47,11 @@
             </span>
           </div>
         </form>
-
-        <h2 id="main-city"></h2>
-
-        <div class="weather-temperature">
-          <a href="#" id="fahrenheitJ" class="active">°F</a>
-          <a href="#" id="celsiusJ" class="celsius">°C</a>
+        <div>
+          <h2 id="main-city"></h2>
+          <span class="weather-temperature">
+            <span>°F</a></span
+          >
           <br />
           <button id="current-location">Current Location</button>
         </div>
@@ -67,10 +67,10 @@
         <div class="current-weather">
           <img class="cloudy-sun-main" id="mainicon" src="" />
           <div>
-            <span class="current-temp" id="current-high">°</span>
+            <span class="current-temp" id="current-high"></span>
           </div>
           <div>
-            <span class="current-low" id="current-low">°</span>
+            <span class="current-low" id="current-low"></span>
           </div>
         </div>
 
@@ -102,8 +102,7 @@
       by Nichole Clark <br /><span class="music">
         Music by <a href="https://mixkit.co"> mixkit</a></span
       ><br />
-      Corkboard background by
-      <a href="https://www.freepik.com/topntp26">topntp26</a>
+      Paper cloud vector created by rawpixel.com - www.freepik.com
     </footer>
     <script src="src/index.js"></script>
   </body>

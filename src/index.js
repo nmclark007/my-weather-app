@@ -21,23 +21,23 @@ function formatDate(currentDate) {
 
   let day = days[currentDate.getDay()];
 
-  return `${day} at ${hours}:${minutes}`;
+  return `<div>Updated on:</div> ${day} at ${hours}:${minutes}`;
 }
 
 let h1 = document.querySelector("#time");
 h1.innerHTML = formatDate(currentDate);
-//
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = [
-    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
+    "Sunday",
   ];
 
   return days[day];
@@ -83,12 +83,6 @@ function updateSearch(event) {
 let searchCity = document.querySelector("#find-weather");
 searchCity.addEventListener("submit", updateSearch);
 
-//function displayWeather(response) {
-//let temp = Math.round(response.data.main.temp);
-//let h1 = document.querySelector("#current-high");
-//h1.innerHTML = `${temp}°`;
-//}
-
 function getWeatherApi(city) {
   let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
   axios
@@ -97,7 +91,7 @@ function getWeatherApi(city) {
     )
     .then(showWeather);
 }
-
+//Current location
 function showPosition(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
@@ -147,28 +141,6 @@ function showWeather(response) {
   getForecast(response.data.coord);
 }
 
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  let celsiusTempMax = Math.round((5 / 9) * (fahrenheitMax - 32));
-  let celsiusTempMin = Math.round((5 / 9) * (fahrenheitMin - 32));
-  let tempMax = document.querySelector("#current-high");
-  let tempMin = document.querySelector("#current-low");
-  celsuisLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  tempMax.innerHTML = tempMax.innerHTML = `${celsiusTempMax}°`;
-  tempMin.innerHTML = tempMin.innerHTML = `${celsiusTempMin}°`;
-}
-
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let tempMax = document.querySelector("#current-high");
-  let tempMin = document.querySelector("#current-low");
-  celsuisLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  tempMax.innerHTML = `${Math.round(fahrenheitMax)}°`;
-  tempMin.innerHTML = `${Math.round(fahrenheitMin)}°`;
-}
-
 function getLocation(event) {
   event.preventDefault();
 
@@ -177,14 +149,5 @@ function getLocation(event) {
 
 let showLocation = document.querySelector("#current-location");
 showLocation.addEventListener("click", getLocation);
-
-let fahrenheitMax = null;
-let fahrenheitMin = null;
-
-let celsuisLink = document.querySelector("#celsiusJ");
-celsuisLink.addEventListener("click", showCelsiusTemp);
-
-let fahrenheitLink = document.querySelector("#fahrenheitJ");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 getWeatherApi("New York");
